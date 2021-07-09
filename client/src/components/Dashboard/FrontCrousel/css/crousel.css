@@ -1,0 +1,17 @@
+.slider_item .collectionpane {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.slider_item {
+  min-height: 90vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-family: auto;
+  font-size: 3.5em;
+}

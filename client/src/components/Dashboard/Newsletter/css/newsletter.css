@@ -1,0 +1,77 @@
+.main-container{
+    background-color:#f5f5f5;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:30px;
+    padding:39px;
+}
+.set-main-top{
+    margin-top:10px;
+}
+.main-container .row{
+    width: 100%;
+    text-align: center;
+    padding:5px;
+}
+.main-container .group-fields{
+    margin-left:auto;
+    margin-right: auto;
+    width:46%;
+}
+#text-field{
+    width:30%;
+    padding:6px;
+    /* height:100%; */
+}
+#sub-field{
+    background-color:rgba(0, 0, 0, 0.65);
+    border: none;
+    color: white;
+    padding:8px;
+    width:16%;
+    margin: auto;
+}
+.form-group{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+
+#ro1,#ro2{
+    font-size:1em;
+}
+#ro1{
+    font-weight: bold;
+}
+#fb,#whats{
+    /* width:3.5%; */
+}
+@media only screen and (max-width: 375px) {
+    #text-field{
+        width:55%;
+    }
+    #sub-field{
+    width:22%;
+
+    }
+   }
+
+   @media only screen and (max-width: 411px) {
+    #text-field{
+        width:55%;
+    }
+    #sub-field{
+    width:22%;
+
+    }
+   }
+   
+   @media only screen and (max-width: 414px) {
+    #text-field{
+        width:55%;
+    }
+    #sub-field{
+    width:22%;
+
+    }
+   }

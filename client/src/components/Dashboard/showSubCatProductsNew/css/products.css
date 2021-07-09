@@ -1,0 +1,65 @@
+.FCD_main_div {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 10px 10px 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.FCD_product_div {
+  margin: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.FCD_product_div .FCD_desc_div {
+  font-weight: bolder;
+  font-family: OLD STANDARD TT;
+  padding-top: 10px;
+}
+.FCD_product_div .FCD_price_div {
+  font-weight: bolder;
+  font-family: OLD STANDARD TT;
+}
+.btn_addTOcart_div {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  justify-content: center;
+  /* height: 100%; */
+  top: 70%;
+  display: none;
+}
+.cart_btn_span {
+  background-color: black;
+  color: white;
+  width: 60%;
+  border: 1px solid gray;
+}
+.cart_btn_span:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.cart_btn_span:hover {
+  background-color: gray;
+  color: white;
+  border: 1px solid gray;
+
+}
+.FCD_product_div:hover .btn_addTOcart_div {
+  display: flex;
+}
+.searchProduct_input {
+  width: 250px !important;
+  /* box-sizing: border-box; */
+  border: 2px solid #000 !important;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfkBAYUHSKgySx8AAAA20lEQVQoz33QsUrDUBSH8Z9mEyrSR1D6Ai4dxRewm4LQtZOD3VyELh3sKtoncOwgmdyFFqSb0M1Jh4KoZGqWxCGmMYn4Tefc/3fPuVwyOkJLsRdjLRW2TCRCZ05dWoj1ysLEu4N1FxhInBRxR/Irzri11MibUFjdqWmlm5Wb2h5qwocn7VzY9qXOp51ceLP7h7DnNS/HFoJKvC91mDctsUHlX+amNoqDnsSN5vr2XGpYHnlsaeXRvWepqaFEv6w0dF27c/Wzu19XqpxLXai9v2AmMhIF/8yYiRx9A/JQOUWkpKTSAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA0LTA2VDIwOjI5OjM0KzAwOjAwibJ3ogAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNC0wNlQyMDoyOTozNCswMDowMPjvzx4AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 40px !important;
+  transition: width 0.4s ease-in-out;
+  outline: none;
+}

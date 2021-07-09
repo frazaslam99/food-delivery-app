@@ -1,0 +1,44 @@
+.checkout_most_main_div {
+  padding-top: 4em;
+}
+.chckout_details_col1_main_div .co_title_div {
+  width: 100%;
+  font-family: "OLD STANDARD TT";
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 4%;
+}
+.chckout_details_col1_main_div {
+  border-right: 1px solid lightgray;
+}
+.chckout_details_col1_main_div .co_form_main_div {
+  padding-right: 66px;
+}
+.co_form_main_div .co_input_tag {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.co_info_title1 {
+  width: 100%;
+  font-family: "MONTSERRAT";
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.co_form_main_div .co_FandLname_form_div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 991px) {
+  .chckout_details_col1_main_div .co_form_main_div {
+    padding-right: 0px !important;
+  }
+  .chckout_details_col2_main_div {
+    padding-top: 50px;
+  }
+}

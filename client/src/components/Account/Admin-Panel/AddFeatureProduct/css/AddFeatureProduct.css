@@ -1,0 +1,32 @@
+.adminPanel_main_div .FP_upload_main_div .Crousel_img_upload_title{
+    color: #407db6;
+    text-align: center;
+    font-family: Old Standard TT;  
+}
+.FP_uplaod_description_price_div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  input[type=submit]:hover {
+    background-color:#1890ff;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: #182e49;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

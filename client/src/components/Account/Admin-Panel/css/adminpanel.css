@@ -1,0 +1,21 @@
+.adminPanel_main_div {
+  padding-top: 5%;
+}
+
+.adminPanel_main_div .Crousel_img_upload_title_div .Crousel_img_upload_title {
+  color: #407db6;
+  text-align: center;
+  font-family: Old Standard TT;
+}
+.Crousel_img_upload_button_div {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.adminPanel_main_div .ant-tabs-nav-wrap {
+  display: flex !important;
+  justify-content: center !important;
+}
+.FC_upload_main_div {
+  padding-top: 50px;
+}

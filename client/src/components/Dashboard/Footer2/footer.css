@@ -1,0 +1,89 @@
+.main_container {
+  padding-top: 70px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: Arapey, serif;
+  color: #777e7e;
+  font-weight: 400;
+  font-style: normal;
+  padding-right: 0% !important;
+}
+.text_div:hover {
+  color: #bac3c3;
+}
+
+.main_container .list_1 {
+  list-style: none;
+  line-height: 1.5;
+}
+.fbImg {
+  height: 20px;
+  width: 18px;
+}
+.text_div {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.pic_div {
+  line-height: 2;
+}
+.add {
+  width: fit-content;
+  text-align: justify;
+}
+
+/* **************************************************** */
+
+@media (max-width: 575px) {
+  .main_container {
+    text-align: center !important;
+    /* line-height: 10; */
+  }
+  .column_2 {
+    margin-top: 20px;
+  }
+  .add {
+    width: 175px;
+  }
+  .column_3 {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main_container,
+  .main_container-lg,
+  .main_container-md,
+  .main_container-sm,
+  .main_container-xl {
+  }
+  /* .add {
+    max-width: 176px;
+  } */
+
+  .imgs {
+    text-align: center;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 1190px) {
+  .add {
+    max-width: 65% !important;
+  }
+  .add {
+    padding-top: 4%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main_div_column_3,
+  .main_div_col2,
+  .main_div_col1 {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .add {
+    width: 100%;
+    text-align: center;
+  }
+}

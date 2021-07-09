@@ -1,0 +1,107 @@
+
+.item .img{
+    /* height: 6vw;
+    width:8vw; */
+    height: 100px;
+  width: auto;
+    min-width: 50px;
+    min-height: 33px;
+}
+.item .col-2,.item .col-3,.item .col-4,.item .col-5{
+    padding-top: 2%
+}
+.item .col-3{
+    min-width: 78px !important;
+}
+.col-1 .picture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.picture .name{
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-lines: 2 !important;
+    font-size: 12px;
+
+max-width: 20ch !important;
+margin-left: 10px
+}
+
+.item .btn-1,.item .btn-2,.item .btn-3{
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    border-width: 1px;
+    outline: none;
+    cursor: pointer;
+}
+.item .btn-1:hover,.item .btn-2:hover,.item .btn-3:hover{
+    background-color: aliceblue
+}
+.item .btn-1:active,.item .btn-2:active,.item .btn-3:active{
+    font-weight: bolder;
+}
+.item .btn-2{
+    padding: 0 10px 0 10px;
+}
+.item .btn-1{
+    padding: 0 5px 0 5px;
+}
+.item .btn-3{
+    padding: 0 5px 0 5px;
+}
+.item .btn-header{
+    /* border: 1px solid black; */
+    min-width: 78px;
+}
+
+.item .delete-btn{
+    cursor: pointer;
+    transition: font-size 100ms linear
+}
+.item .delete-btn:hover{
+    font-size:22px !important;
+}
+
+
+
+@media (max-width:768px){
+    /* .item .col-4,.item .col-5{
+        margin-top: 20px !important;
+     
+    } */
+    .item .col-1,.item .col-2,.item .col-3,.item .col-4,.item .col-5{
+        text-align: center;
+    }
+    .col-1 .picture{
+        flex-direction: column !important
+    }
+    .col-1 .name{
+        margin: auto
+    }
+
+}
+@media (max-width:574px){
+
+    /* .item .img{
+        height: 50px;
+        width: 75px;
+    } */
+
+    /* .item .col-4,.item .col-5, .item .col-3{
+        margin-top: 20px !important;
+     
+    } */
+    /* .item .col-1,.item .col-2,.item .col-3,.item .col-4,.item .col-5{
+        text-align: left;
+    }
+     */
+
+}
+
+

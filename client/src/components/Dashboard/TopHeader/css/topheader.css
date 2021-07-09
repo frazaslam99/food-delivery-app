@@ -1,0 +1,33 @@
+.main_div_topheader{
+ width: 100%;
+ height: auto;
+ background-color: #182e49;   
+ padding: 10px;
+ box-sizing: border-box;
+ display: flex;
+ flex-wrap: nowrap;
+ 
+}
+.data_div_topheader{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* font-family: 'Old Standard TT'; */
+    font-family: 'Montserrat';
+    color: white;
+
+}
+.topheader_User_icons_div{
+    margin-right: 1%;
+    font-size: 20px;
+}
+.topheader_Fb_icons_div{
+    font-size: 20px; 
+    margin-right: 1%;
+}
+.main_div_topheader .anticon{
+    display: none !important;
+}
+.topheader_Cart_icons_div{
+    font-size: 20px; 
+}

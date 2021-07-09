@@ -1,0 +1,24 @@
+.introduction_main_div {
+  width: 75%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 120px 30px 60px 30px;
+  font-family: "OLD STANDARD TT";
+  color: #1f2021;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 800px) {
+  .introduction_main_div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .introduction_main_div {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+  }
+}

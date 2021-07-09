@@ -1,0 +1,83 @@
+.FC_title_div {
+  text-align: center;
+  font-family: "Old Standard TT";
+  /* color:#0056b3; */
+  height: auto;
+  padding: 50px;
+}
+.Featured_collect_main_div {
+  margin: auto;
+  width: 90%;
+  box-sizing: border-box;
+}
+.FC_Most_Main_Div {
+  /* padding: 0 12vw 0 12vw; */
+  margin-bottom: 10vh;
+  background-color: #fafafa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.Men_Column .Men_title {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  z-index: 1000;
+  font-size: 20px;
+  font-family: serif;
+  /* font-weight: bold; */
+  color: white;
+}
+.Women_Column .Women_title {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  z-index: 1000;
+  font-size: 20px;
+  font-family: serif;
+  /* font-weight: bold; */
+  color: white;
+}
+.FC_Most_Main_Div .heading {
+  /* padding-top: 50px; */
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: "old standard tt";
+  text-align: center;
+  margin-top: 0px !important;
+}
+.FC_Most_Main_Div .line-break {
+  width: 100px;
+  margin-bottom: 80px;
+  background: grey;
+}
+.FC_Most_Main_Div .col-1 .backgroundimage {
+  /* background-image: url("../images/Menz.jpg"); */
+}
+.FC_Most_Main_Div .col-2 .backgroundimage {
+  background-image: url("../images/Womens.jpg");
+}
+.FC_Most_Main_Div .col-3 .backgroundimage {
+  background-image: url("../images/Bags.jpg");
+}
+.FC_Most_Main_Div .backgroundimage {
+  height: 100%;
+  background-position: center;
+  transition: transform 500ms linear;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 268px;
+  width: 100%;
+}
+.FC_Most_Main_Div .inner {
+  text-align: center;
+  font-family: "Montserrat,Helvetica Neue,Verdana,Arial,sans-serif";
+  font-weight: 600;
+  font-size: 18px;
+  color: #282828;
+  margin-bottom: 9px;
+}
+.FC_Most_Main_Div .backgroundimage:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}

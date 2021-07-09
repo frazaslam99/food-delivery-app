@@ -1,0 +1,215 @@
+.contactUs_most_main_div {
+  width: 100%;
+}
+.contactUs_main_div {
+  width: 100%;
+}
+.contactUs_main_div .contactus_front_img_div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1440335680360-79703e7032f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-attachment: fixed;
+  /* opacity: 0.5; */
+  background-size: cover;
+}
+
+/* .contactUs_main_div .conatactUs_front_img_overlay_div {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(47, 183, 244);
+  opacity: 0.7;
+} */
+
+.contactUs_main_div .contactUs_frontImg_upper_text_div {
+  text-align: center;
+  position: relative;
+}
+.contactUs_frontImg_upper_text_div .upper_text_FI_title {
+  letter-spacing: 4px;
+  font-size: 3.3em;
+  font-weight: bolder;
+  padding-bottom: 20px;
+  font-weight: 700;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.contactUs_frontImg_upper_text_div .upper_text_FI_SubTitle {
+  color: white;
+  font-weight: 600;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.contactUs_info_detail_div {
+  background-color: white;
+}
+.contactUs_info_main_div .contactUs_info_title_div {
+  padding-top: 40px;
+  background-color: white;
+}
+.contactUs_info_main_div .contactUs_info_title_div .contactUs_info_title_h1 {
+  text-align: center;
+  color: #222328;
+  font-family: Roboto;
+  font-weight: 600;
+  font-family: Roboto;
+  margin: 0px;
+  background-color: white;
+}
+.contactUs_info_main_div .contactUs_info_detail_div {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 11px;
+}
+.contactUs_info_main_div .contactUs_info_detail_div .contactUs_info_detail_h1 {
+  text-align: center;
+  font-family: Roboto;
+  color: rgb(80, 80, 80);
+  font-weight: 700;
+  font-size: 18.72px;
+}
+.contactUs_info_main_div .contactUs_info_SubDetail_div {
+  padding-bottom: 65px;
+  background-color: white;
+}
+.contactUs_info_main_div
+  .contactUs_info_SubDetail_div
+  .contactUs_info_SubDetail_h1 {
+  text-align: center;
+  font-family: Roboto;
+  color: rgb(80, 80, 80);
+  font-weight: 700;
+  background-color: white;
+  margin: 0px;
+}
+.contactUs_main_div .grid_contactUs_form_main_div {
+  background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1440335680360-79703e7032f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-attachment: fixed;
+  /* background-image: url("https://images.unsplash.com/photo-1462007895615-c8c073bebcd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.grid_contactUs_form_main_div .CU_grid_title_col1_div {
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+.grid_contactUs_form_main_div .CU_grid_title_col1_div .CU_grid_title_col1_h5 {
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+}
+/* email input */
+.CU_grid_form_main_div .CU_grid_form_email_input_div {
+  padding-bottom: 10px;
+}
+.CU_grid_form_main_div .CU_grid_form_email_input {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+/* form main div */
+
+.CU_grid_form_main_div .CU_grid_form_name_input_div {
+  display: flex;
+  width: 100%;
+}
+/* name input div */
+.CU_grid_form_main_div .CU_grid_form_name_input_div {
+  padding-bottom: 10px;
+}
+/* fname input */
+.CU_grid_form_main_div .CU_grid_form_fname_input {
+  width: 95%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+.CU_grid_form_main_div .CU_grid_form_fname_input_div {
+  width: 50%;
+}
+/* lname */
+.CU_grid_form_main_div .CU_grid_form_lname_input {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+.CU_grid_form_main_div .CU_grid_form_lname_input_div {
+  width: 50%;
+}
+/* Query details textarea */
+.CU_grid_form_main_div .CU_grid_form_queryDetail_input {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+/* .grid_contactUs_form_main_div .conatactUs_grid_img_overlay_div {
+  position: absolute;
+  width: 100%;
+  height: 24.5%;
+  background-color: rgb(47, 183, 244);
+  opacity: 0.7;
+} */
+.CU_grid_col2_main_div {
+  padding-bottom: 65px;
+}
+.CU_grid_col2_main_div .CU_grid_title_col2_div {
+  padding-top: 20px;
+}
+.CU_grid_col2_main_div .CU_grid_title_col2_div .CU_grid_title_col2_h5 {
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+}
+.grid_col2_cd_main_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid_col2_cd_main_div .col2_cd_1_title_detail {
+  padding-top: 8px;
+  width: 50%;
+}
+.col2_cd_1_title_detail .col2_cd_1_title_div {
+  color: #fff;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+.col2_cd_1_title_detail .col2_cd_detail_div {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.8;
+}

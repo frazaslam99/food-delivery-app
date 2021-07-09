@@ -1,0 +1,26 @@
+.PD_Main_Component{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+   text-align: center;
+   font-family: Old Standard TT;
+   font-weight: bold;
+   padding: 10px;
+   color: rgba(0, 0, 0, 0.65);
+}
+.PD_Delivery_Div{
+    width: 33%;
+    border-right: 1px solid rgba(0, 0, 0, 0.65);
+}
+.PD_ReturnPolicy_div{
+    width: 33%;
+    border-right: 1px solid rgba(0, 0, 0, 0.65);
+
+}
+.PD_exchange_div{
+    width: 33%;
+}
+.PD_Most_Main_div hr{
+    background-color: rgba(0, 0, 0, 0.65)
+}
