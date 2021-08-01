@@ -10,6 +10,8 @@ import CartModal from "./cartModal/cartModal";
 import MenuDrawer from "./Drawer/drawer";
 import { withRouter } from "react-router-dom";
 import store from "../../../store/store";
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import LoginForm from "./Login/login"
 
 const style = {
   link: { backgroundColor: "transparent", fontSize: "15px" },
@@ -111,6 +113,7 @@ class Header extends Component {
           position: this.state.bgPosition,
           zIndex: 10,
           top: 0,
+          backgroundColor: "grey",
           width: "100%",
           paddingTop: "15px",
         }}
@@ -144,10 +147,10 @@ class Header extends Component {
                 }}
               >
                 <Link to="/">
-                  <div style={{ paddingTop: "10px" }}>
+                  <div style={{ paddingTop: "0px" }}>
                     {/* <img src={Logo} className="siteLogo_saphona" /> */}
                     &nbsp; &nbsp;
-                    <h1 style={{ color: color, ...style.heading }}>Epic Eateries</h1>
+                    <h1 style={{ color: "white", ...style.heading, fontSize: "23px" }}>Pocket Mart</h1>
                   </div>
                 </Link>
               </div>
@@ -156,11 +159,91 @@ class Header extends Component {
             <Col span={12}>
               <div className="headerRight">
                 <ul style={{ listStyle: "none" }} className="ul">
+
+                  {/* <div> */}
+                  {/* <ul style={{ listStyle: "none" }} className="ul">
+                      
+                    </ul> */}
+                  <li className="listitem responsive" >
+                    <div class="dropdown">
+                      <button>
+                        <PermIdentityIcon />
+                      </button>
+                      <div class="dropdown-content">
+                        <div className="drop-inner">
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              width: "100%",
+                            }}
+                          >
+                            {/* {this.state.saphonaSubCats.map((item, index) => {
+                              return ( */}
+                            <Link
+                            //  to={`/login`}
+                            // onMouseOver={() =>
+                            //   <span></span>
+                            // }
+                            // onMouseOut={() =>
+                            //   this.setState({
+                            //     hoverImage:
+                            //       this.state.saphonaSubCats &&
+                            //       this.state.saphonaSubCats[0] &&
+                            //       this.state.saphonaSubCats[0].file,
+                            //   })
+                            // }
+                            >
+                              <LoginForm />
+                              {/* <span
+                                    className="dpdwn_link"
+                                    onClick={() =>
+                                      <LoginForm/>
+                                    }
+                                  >
+                                    Login
+                                  </span> */}
+                              {/* <span
+                                    className="dpdwn_link"
+                                    onClick={(event) =>
+                                      this.sendReqToGetProduct(
+                                        event,
+                                        item.maincategory,
+                                        item.subCateg
+                                      )
+                                    }
+                                  >
+                                    Register
+                                  </span> */}
+                            </Link>
+                            {/* );
+                            })} */}
+                          </div>
+                          {/* <img
+                            style={{
+                              textAlign: "center",
+                              display: "flex",
+                              justifyContent: "flex-end",
+                            }}
+                            src={this.state.hoverImage}
+                            width="300px"
+                            height="450px"
+                          /> */}
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+
+                  {/* </div> */}
+
+                
+
+
                   <li className="listitem responsive">
                     <Link
                       to="/"
-                      // onClick={()=>this.onBgColorChange('static')}
-                      style={{ color: color, ...style.link }}
+                      style={{ color: "white", ...style.link }}
                     >
                       HOME
                     </Link>
@@ -168,7 +251,8 @@ class Header extends Component {
 
                   <li className="listitem responsive">
                     <div class="dropdown">
-                      <span className="dropbtn">Menu</span>
+                      <span className="dropbtn" style={{ color: "white" }}>Menu</span>
+                      <i class="fa fa-caret-down" style={{ color: "white", marginLeft: "5px" }}></i>
                       <div class="dropdown-content">
                         <div className="drop-inner">
                           <div
@@ -224,6 +308,7 @@ class Header extends Component {
                           /> */}
                         </div>
                       </div>
+
                     </div>
                   </li>
 
@@ -246,12 +331,14 @@ class Header extends Component {
                       style={{
                         borderWidth: "0px",
                         boxShadow: "0 0 0 0",
+
                       }}
                     >
                       <CartModal />
                     </Badge>
                   </li>
                 </ul>
+
               </div>
             </Col>
           </Row>

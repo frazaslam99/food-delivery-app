@@ -73,7 +73,7 @@ export default class Footer extends React.Component {
             <Col xs="12" sm="12" md="6" lg="4" xl="4">
               <div className="main_div_col2">
                 <a
-                  href="https://www.facebook.com/Saphona-By-Zainab-Ibrahim-412989482792105/"
+                  href="https://www.facebook.com/AliExpress/"
                   target="_blank"
                   style={{ color: "rgb(119, 126, 126)" }}
                 >
@@ -91,7 +91,7 @@ export default class Footer extends React.Component {
                   <span class="text_div">Pinterest</span>
                 </div> */}
                 <a
-                  href="https://www.instagram.com/saphona_official/"
+                  href="https://www.instagram.com/shopecs/?hl=en"
                   target="_blank"
                   style={{ color: "rgb(119, 126, 126)" }}
                 >
@@ -110,11 +110,11 @@ export default class Footer extends React.Component {
                 <div className="add">
                   <div class="text_div">
                     Copyright © <Moment format="YYYY">{dateToFormat}</Moment>,
-                    Saphona By Zainab Ibrahim
+                    Pocket Market By Fraz Aslam
                     <div>
                       Officially Affiliated with :
                       <span style={{ fontWeight: "bold", paddingLeft: "3px" }}>
-                        AuraApperals
+                        Fashion
                       </span>
                     </div>
                   </div>

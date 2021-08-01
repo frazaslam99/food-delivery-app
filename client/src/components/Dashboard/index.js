@@ -31,9 +31,9 @@ class Dashboard extends React.Component {
             return (
               <React.Fragment>
                 <FrontCrousel />
-                <Introduction />
+                {/* <Introduction /> */}
                 <FeaturedCollection />
-                <FeaturedProducts />
+                {/* <FeaturedProducts /> */}
                 <NewsLetter />
                 <PolicyDetails />
               </React.Fragment>

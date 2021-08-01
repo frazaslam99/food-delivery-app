@@ -9,13 +9,13 @@ class ContactUS extends React.Component {
       <div className="contactUs_most_main_div">
         <div className="contactUs_main_div">
           <div>
-            <Header />
+         
           </div>
           {/* Front Image Div */}
           <div className="contactus_front_img_div">
             <div className="conatactUs_front_img_overlay_div"></div>
             <div className="contactUs_frontImg_upper_text_div">
-              <h1 className="upper_text_FI_title">SAPHONA</h1>
+              <h1 className="upper_text_FI_title">Pocket Mart</h1>
               <h3 className="upper_text_FI_SubTitle">
                 <b> YOU’VE GOT PROBLEMS, WE’VE GOT SOLUTIONS</b>
               </h3>
@@ -41,7 +41,7 @@ class ContactUS extends React.Component {
             {/* Sub-Deatil */}
             <div className="contactUs_info_SubDetail_div">
               <h5 className="contactUs_info_SubDetail_h1">
-                Tel: +923056633636
+                Tel: +923154606900
               </h5>
             </div>
           </div>
@@ -141,19 +141,19 @@ class ContactUS extends React.Component {
                         <div className="col2_cd_1_title_detail">
                           <div className="col2_cd_1_title_div">Email</div>
                           <div className="col2_cd_detail_div">
-                            saphonaprints@gmail.com
+                            frazaslam300@gmail.com
                           </div>
                         </div>
                         <div className="col2_cd_1_title_detail">
                           <div className="col2_cd_1_title_div">Phone</div>
                           <div className="col2_cd_detail_div">
-                            +923056633636
+                            +923154606900
                           </div>
                         </div>
                         <div className="col2_cd_1_title_detail">
                           <div className="col2_cd_1_title_div">PHONE-2</div>
                           <div className="col2_cd_detail_div">
-                            +923084443636
+                            +92237391881
                           </div>
                         </div>
                       </div>

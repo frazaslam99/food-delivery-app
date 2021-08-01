@@ -11,16 +11,14 @@ function About(props) {
       <Container>
         <div className="aboutContainer">
           <div className="aboutImgContainer">
-            <img className="aboutImg" src={require("./images/f.jpg")} alt="" />
+            <img className="aboutImg" src={require("./images/about.jpg")} alt="" />
           </div>
           <div className="aboutTextContainer">
             <h1 className="aboutH1">
-              DAILY FUSION WEAR FOR FASHION CONSCIOUS WOMEN
+             About Us
             </h1>
             <p className="aboutp">
-              Our products are minimal yet experimental, functional yet
-              versatile and most importantly affordable. For fresh aesthetics
-              and timeless elegance Saphona is your only choice.Officially Affiliated With Saphona By Zainab Ibrahim
+            Our mission is what drives us to do everything possible to expand human potential. We do that by creating groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse global team and by making a positive impact in communities where we live and work.
             </p>
           </div>
         </div>
@@ -34,16 +32,16 @@ function About(props) {
               WE CONVERT IDEAS INTO REALITY
             </h1>
             <p className="aboutp">
-              {/* We are fast fashion brand that is data driven & makes designs as
+              We are fast fashion brand that is data driven & makes designs as
               per what our customers want. We focus on the future, work on
-              expansion and strive to be the best for you. You demand, we create */}
-              Launched in 2017, Saphona stepped in the market with a vivid
+              expansion and strive to be the best for you. You demand, we create
+              Launched in 2021, Store stepped in the market with a vivid
               vision of catering to every need of fashionistas of all ages. From
               it's wide range of intricately fabricated formal-wear to a vast
               variety of casual-wear, Saphona has got you all covered. Saphona's
               idiosyncratic and distinctive luxury prints and intricately
               embroidered apparel will transform you into a head-turner diva.
-              The fusion of aesthetic designs with high-quality fabric will
+              The fusion of aesthetic designs with high-quality Products will
               upgrade your wardrobe and that too in affordable prices. Our aim
               is to make exclusive fashion attire accessible to customers of all
               ages.

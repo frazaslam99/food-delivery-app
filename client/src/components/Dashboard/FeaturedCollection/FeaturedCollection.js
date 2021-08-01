@@ -88,7 +88,7 @@ class FeaturedCollection extends React.Component {
                   }}
                 >
                   <Link
-                    to={`/catelog/Saphona/${item.subCateg && item.subCateg}`}
+                    to={`/catelog/Menu/${item.subCateg && item.subCateg}`}
                   >
                     <div
                       className="backgroundimage image-1"

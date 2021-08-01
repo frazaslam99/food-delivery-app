@@ -124,16 +124,16 @@ class MenuDrawer extends Component {
               });
             }}
           >
-            Saphona
+            Home
             <span style={{ float: "right " }}>
-              <img src={require("./images/down-arrow.png")} />
+              
             </span>
           </p>
           {this.state.saphonaSubCats.map((item) => {
             return (
               <p hidden={this.state.showDroprDown == false}>
                 <Link
-                  to={`/catelog/Saphona/${item}`}
+                  to={`/catelog/Menu/${item}`}
                   style={{ color: "lightGrey" }}
                 >
                   <span

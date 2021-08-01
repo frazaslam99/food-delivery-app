@@ -59,7 +59,7 @@ class NewsLetter extends React.Component {
             }}
           >
             <Col>
-              Join Saphona By Zainab-Ibrahim and get all the latest news, trends
+              Join Pocket Mart By Fraz and get all the latest news, trends
               and offers
             </Col>
           </Row>
@@ -74,7 +74,7 @@ class NewsLetter extends React.Component {
           <Row className="row">
             <Col>
               <a
-                href="https://www.facebook.com/Saphona-By-Zainab-Ibrahim-412989482792105/"
+                href="https://www.facebook.com/AliExpress/"
                 target="_blank"
               >
                 {/* <img src={fb} id="fb" alt="fb" /> */}
@@ -94,7 +94,7 @@ class NewsLetter extends React.Component {
               </span>
               &nbsp; &nbsp; &nbsp;
               <a
-                href="https://www.instagram.com/saphona_official/"
+                href="https://www.instagram.com/shopecs/?hl=en"
                 target="_blank"
               >
                 <span
@@ -105,7 +105,7 @@ class NewsLetter extends React.Component {
                 </span>
               </a>
               &nbsp; &nbsp; &nbsp;
-              <a href="https://wa.me/923056633636">
+              <a href="https://wa.me/923154606900">
                 <span
                   className="font-header"
                   style={{ color: "rgba(0, 0, 0, 0.65)", fontSize: "30px" }}

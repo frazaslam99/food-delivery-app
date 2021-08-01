@@ -93,7 +93,7 @@ class CartModal extends Component {
     return (
       <div className="cart-modal">
         <FiShoppingCart
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer",color:"white" }}
           size={25}
           onClick={() => this.setModalVisible(true)}
         />

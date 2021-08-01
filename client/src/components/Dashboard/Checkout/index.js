@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 import { Button, message } from "antd";
 import { Badge } from "antd";
 import { ClockCircleOutlined } from "@ant-design/icons";
-
+import { loadStripe, Elements } from '@stripe/stripe-js';
+import onlinepay from "../OnlinePAyment/OnlinePayment"
 const key = "updatable";
+
+
 
 const openMessage = () => {
   message.loading({ content: "Loading...", key });
@@ -145,6 +148,7 @@ class Checkout extends React.Component {
 
   render() {
     return (
+
       <div
         className="checkout_most_main_div"
         style={{ backgroundColor: "#FAFAFA" }}
@@ -155,7 +159,7 @@ class Checkout extends React.Component {
               <div className="chckout_details_col1_main_div">
                 <div className="co_title_div">
                   <Link to="/" style={{ color: "rgb(4,4,4)" }}>
-                    <span>Saphona</span>
+                    {/* <span>Saphona</span> */}
                   </Link>
                 </div>
                 {/* form div */}
@@ -173,17 +177,85 @@ class Checkout extends React.Component {
                       onChange={(event) => {
                         this.handleChange(event);
                       }}
+                      required
                     />
 
                     <input
                       type="text"
                       name="phoneNo"
                       placeholder="Phone Number"
+                      required
                       className="co_phoneNo_input co_input_tag"
                       onChange={(event) => {
                         this.handleChange(event);
                       }}
                     />
+
+                    <label
+                      for="onlinepay"
+                      className="co_info_title1"
+                      style={{ marginTop: "18px" }}
+                    >
+                      Online Payment
+                    </label>
+                    <label for="fname">Accepted Cards</label>
+                    <div class="icon-container" style={{ padding: "7px 0", fontSize: "24px" }} >
+                      <i class="fa fa-cc-visa" style={{ color: "navy" }}></i>
+                      <i class="fa fa-cc-amex" style={{ color: "blue" }}></i>
+                      <i class="fa fa-cc-mastercard" style={{ color: "red" }} ></i>
+                      <i class="fa fa-cc-discover" style={{ color: "orange" }}></i>
+                    </div>
+
+                    <label for="cname">Name on Card</label>
+
+                    <input
+                      type="text"
+                      id="cname"
+                      name="Name on Card"
+                      required="true"
+                      placeholder="Fraz Aslam"
+                      className="co_mail_input co_input_tag"
+                      onChange={(event) => {
+                        this.handleChange(event);
+                      }}
+                    />
+
+                    <label for="expmonth">Credit card number</label>
+                    <input
+                      type="text"
+                      name="card-number"
+                      placeholder="1111-2222-3333-4444"
+                      required="true"
+                      className="co_phoneNo_input co_input_tag"
+                      onChange={(event) => {
+                        this.handleChange(event);
+                      }}
+
+                    />
+
+                    <label for="expmonth">Exp Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="September" />
+
+                    <div class="row" style={{ dispaly: "flex", flexWrap: "wrap" }}>
+                      <div class="col-50" style={{ flex: "50%", padding: "0 16px" }}>
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="2025" />
+                      </div>
+                      <div class="col-50" style={{ flex: "50%", padding: "0 16px" }}>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="352" />
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
                     <label
                       for="cInfo"
                       className="co_info_title1"
@@ -197,6 +269,7 @@ class Checkout extends React.Component {
                           style={{ width: "95%" }}
                           type="text"
                           name="fname"
+                          required
                           placeholder="First Name"
                           className="co_fname_input co_input_tag"
                           onChange={(event) => {
@@ -208,6 +281,7 @@ class Checkout extends React.Component {
                         <input
                           type="text"
                           name="lname"
+                          required
                           placeholder="Last Name"
                           className="co_lname_input co_input_tag"
                           onChange={(event) => {
@@ -219,6 +293,7 @@ class Checkout extends React.Component {
                     <input
                       type="text"
                       name="address"
+                      required
                       placeholder="Address"
                       className="co_address_input co_input_tag"
                       onChange={(event) => {
@@ -229,6 +304,7 @@ class Checkout extends React.Component {
                       type="text"
                       name="city"
                       placeholder="City"
+                      required
                       className="co_city_input co_input_tag"
                       onChange={(event) => {
                         this.handleChange(event);
@@ -238,6 +314,7 @@ class Checkout extends React.Component {
                       type="text"
                       name="country"
                       placeholder="country"
+                      required
                       className="co_country_input co_input_tag"
                       onChange={(event) => {
                         this.handleChange(event);
@@ -249,6 +326,7 @@ class Checkout extends React.Component {
                           style={{ width: "95%" }}
                           type="text"
                           name="province"
+                          required
                           placeholder="province"
                           className="co_province_input co_input_tag"
                           onChange={(event) => {
@@ -261,6 +339,7 @@ class Checkout extends React.Component {
                           type="text"
                           name="postalCode"
                           placeholder="postal Code"
+                          required
                           className="co_postalCode_input co_input_tag"
                           onChange={(event) => {
                             this.handleChange(event);
@@ -268,15 +347,16 @@ class Checkout extends React.Component {
                         />
                       </div>
                     </div>
+
                     {this.state.email !== "" &&
-                    this.state.phoneNo !== "" &&
-                    this.state.fname !== "" &&
-                    this.state.lname !== "" &&
-                    this.state.address !== "" &&
-                    this.state.city !== "" &&
-                    this.state.country !== "" &&
-                    this.state.province !== "" &&
-                    this.state.postalCode !== "" ? (
+                      this.state.phoneNo !== "" &&
+                      this.state.fname !== "" &&
+                      this.state.lname !== "" &&
+                      this.state.address !== "" &&
+                      this.state.city !== "" &&
+                      this.state.country !== "" &&
+                      this.state.province !== "" &&
+                      this.state.postalCode !== "" ? (
                       <input
                         type="submit"
                         value="Submit"
@@ -314,9 +394,8 @@ class Checkout extends React.Component {
                             style={{
                               height: "70px",
                               width: "70px",
-                              backgroundImage: `url(${
-                                Url + "/subcatuploads/" + item.file[0].filename
-                              })`,
+                              backgroundImage: `url(${Url + "/subcatuploads/" + item.file[0].filename
+                                })`,
                               backgroundRepeat: "no-repeat",
                               backgroundSize: "cover",
                               backgroundPosition: "50% 50%",
@@ -415,17 +494,28 @@ class Checkout extends React.Component {
                   >
                     <span>Total</span>
                     <span style={{ float: "right" }}>
-                      {`Rs - ${parseInt(this.state.finalAmount)}`}
+                      {`Rs : ${parseInt(this.state.finalAmount)}`}
                     </span>
                   </div>
+                  <hr />
+
+
+
                 </div>
                 {/* );
                 })} */}
+
+
               </div>
             </Col>
           </Row>
         </Container>
-      </div>
+
+
+      </div >
+
+
+
     );
   }
 }
