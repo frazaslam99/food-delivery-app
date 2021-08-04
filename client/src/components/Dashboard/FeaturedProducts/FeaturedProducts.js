@@ -96,7 +96,7 @@ class FeaturedProducts extends React.Component {
                         className="fp_bg_img_div"
                         style={{
                           width: "330px",
-                          height: "400px",
+                          height: "300px",
                           backgroundImage: `url(${
                             Url + "/subcatuploads/" + item.files[0].filename
                           }`,
@@ -107,7 +107,11 @@ class FeaturedProducts extends React.Component {
                       ></div>
                     </Link>
                     <div className="slider_title_price_div">
-                      {item.title}--{item.price}
+                    <span style={{fontStyle:"italic",fontSize:"15px",}}><b>{item.title}</b></span>
+                      <br></br>
+                      <span style={{fontStyle:"italic",fontSize:"15px"}}><b>Rs- {item.price}</b> </span>
+
+                    
                     </div>
                   </div>
                 );

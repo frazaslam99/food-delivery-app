@@ -10,8 +10,8 @@ class PolicyDetails extends React.Component {
             <hr />
                 <div className='PD_Main_Component'>
                     <div className='PD_Delivery_Div'> DELIVERIES ALL OVER PAKISTAN</div>
-                    <div className='PD_ReturnPolicy_div'>15-DAYS RETURN POLICY</div>
-                    <div className='PD_exchange_div'>EXCHANGEABLE POLICY</div>
+                    <div className='PD_ReturnPolicy_div'>WE DELIVER BEST QUALITY</div>
+                    <div className='PD_exchange_div'>BEST DEAL</div>
                 </div>
                 <hr />
             </div>

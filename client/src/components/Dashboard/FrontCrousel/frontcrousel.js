@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,7 +15,7 @@ import { connect } from "react-redux";
 // import { Url } from "../../Endpoint/index";
 import "./css/crousel.css";
 const img = {
-  height: "100vh",
+  height: "120vh",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -66,14 +68,15 @@ class SimpleSlider extends Component {
       lazyLoad: "progressive",
     };
     return (
+   
       <div className="slider">
-        <Slider {...settings} style={{ zIndex: "5", overflow: "hidden" }}>
+        <Slider {...settings} style={{ zIndex: "5", overflow: "hidden",height:"auto" }}>
           {this.props.nsliderImgs.map((item) => {
             return (
               <div>
                 {console.log("item", item.file)}
                 <div
-                  style={{ backgroundImage: `url(${Url + item.file})`, ...img }}
+                  style={{ backgroundImage: `url(${Url + item.file})`, ...img ,}}
                 >
                   {/* <div className="slider_item">
                     <div className="collectionpane">
@@ -104,6 +107,7 @@ class SimpleSlider extends Component {
           })}
         </Slider>
       </div>
+  
     );
   }
 }

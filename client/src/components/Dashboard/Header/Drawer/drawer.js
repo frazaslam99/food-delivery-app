@@ -106,7 +106,7 @@ class MenuDrawer extends Component {
         <MdMenu
           color={this.props.color}
           size={30}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer",color:"white" }}
           onClick={this.showDrawer}
         />
 
@@ -118,14 +118,40 @@ class MenuDrawer extends Component {
         >
           <p
             style={{ color: "white", cursor: "pointer" }}
+            // onClick={() => {
+            //   this.setState({
+            //     showDroprDown: !this.state.showDroprDown,
+            //   });
+            // }}
+          >
+              <Link
+                      to="/"
+                      // onClick={()=>this.onBgColorChange('static')}
+                      // style={{ color: color, ...style.link }}
+                    >
+
+                   
+            Home
+            </Link>
+            {/* <span style={{ float: "right " }}>
+        
+            
+            </span> */}
+          </p>
+         
+         
+          <Divider />
+          {/* <p
+            style={{ color: "white", cursor: "pointer" }}
             onClick={() => {
               this.setState({
                 showDroprDown: !this.state.showDroprDown,
               });
             }}
           >
-            Home
+            Menu
             <span style={{ float: "right " }}>
+            <img src={require("./images/down-arrow.png")} />
               
             </span>
           </p>
@@ -133,52 +159,84 @@ class MenuDrawer extends Component {
             return (
               <p hidden={this.state.showDroprDown == false}>
                 <Link
-                  to={`/catelog/Menu/${item}`}
+                  to={`/catelog/${item.maincategory}/${item.subCateg}`}
                   style={{ color: "lightGrey" }}
                 >
                   <span
                     onClick={(event) =>
-                      this.sendReqToGetProduct(event, "Saphona", item)
+                      this.sendReqToGetProduct(event, 
+                        item.maincategory,
+                         item.subCateg
+                      )
                     }
                   >
-                    {item}
+                   {item.subCateg}
                   </span>
                 </Link>
               </p>
             );
           })}
-          <Divider />
-          <p
-            style={{ color: "white", cursor: "pointer" }}
-            onClick={() => {
-              this.setState({
-                showAuraMblDpdwn: !this.state.showAuraMblDpdwn,
-              });
-            }}
-          >
-            Aura
-            <span style={{ float: "right " }}>
-              <img src={require("./images/down-arrow.png")} />
-            </span>
-          </p>
-          {this.state.auraSubCats.map((item) => {
-            return (
-              <p hidden={this.state.showAuraMblDpdwn == false}>
-                <Link
-                  to={`/catelog/Aura/${item}`}
-                  style={{ color: "lightGrey" }}
-                >
-                  <span
-                    onClick={(event) =>
-                      this.sendReqToGetProduct(event, "Aura", item)
-                    }
-                  >
-                    {item}
-                  </span>
-                </Link>
-              </p>
-            );
-          })}
+           */}
+
+           <div class="dropdown">
+                      <span className="dropbtn" style={{ color: "white" }}>Menu</span>
+                      <i class="fa fa-caret-down" style={{ color: "white", marginLeft: "5px" }}></i>
+                      <div class="dropdown-content" style={{ minHeight: 0,color:"white" }}>
+                        <div className="drop-inner">
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              width: "150px",
+                              height: "auto",
+                              backgroundColor: "#9b9696",
+                              color:"white"
+                            }}
+                          >
+                            {this.state.saphonaSubCats.map((item, index) => {
+                              return (
+                                <Link
+                                  to={`/catelog/${item.maincategory}/${item.subCateg}`}
+                                  onMouseOver={() =>
+                                    this.setState({
+                                      hoverImage: item.file ? item.file : null,
+                                    })
+                                  }
+                                  onMouseOut={() =>
+                                    this.setState({
+                                      hoverImage:
+                                        this.state.saphonaSubCats &&
+                                        this.state.saphonaSubCats[0] &&
+                                        this.state.saphonaSubCats[0].file,
+                                    })
+                                  }
+                                >
+                                  <span
+                                    className="dpdwn_link"
+                                    onClick={(event) =>
+                                      this.sendReqToGetProduct(
+                                        event,
+                                        item.maincategory,
+                                        item.subCateg
+                                      )
+                                    }
+                                  >
+                                    {item.subCateg}
+                                  </span>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                      
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+          
+        
           <Divider />
         </Drawer>
       </div>

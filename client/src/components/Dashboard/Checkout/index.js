@@ -358,12 +358,14 @@ class Checkout extends React.Component {
                       this.state.province !== "" &&
                       this.state.postalCode !== "" ? (
                       <input
+                       className="btn  btn-block" style={{ backgroundColor: "gray", color: "white" }}
                         type="submit"
                         value="Submit"
                         onClick={this.buyNow}
                       />
                     ) : (
                       <input
+                       className="btn  btn-block" style={{ backgroundColor: "#808080", color: "white" }}
                         type="submit"
                         value="Please Fill All The Fields"
                         // onClick={this.buyNow}

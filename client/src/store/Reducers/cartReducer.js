@@ -1,4 +1,8 @@
 let initialState = {
+    arrayData: [
+
+    ],
+    loginData: [],
     cartItems: [
 
     ],
@@ -11,7 +15,8 @@ let initialState = {
         {
 
         }
-    ]
+    ],
+
 
 }
 
@@ -45,13 +50,48 @@ const cartReducer = (state = initialState, action) => {
         newState.total = action.payload;
         // newState.inProcess = false;
         return newState;
-    } else if (action.type === "Remove-cartItem") {
+
+    } if (action.type === "SIGNUP") {
+        console.log("duta", action.payload)
+        console.log("dutaaaa", newState.arrayData)
+
+        newState.arrayData = action.payload;
+        console.log("dutaaaa", newState)
+
+        // newState.inProcess = false;
+        return newState;
+    }
+
+    if (action.type === "LOGIN") {
+        console.log("duta", action.payload)
+        console.log("dutaaaa", newState.loginData)
+
+        newState.loginData = action.payload;
+        console.log("dutaaaa", newState)
+
+        // newState.inProcess = false;
+        return newState;
+    }
+
+
+    if (action.type === "LOGOUT") {
+        console.log("duta", action.payload)
+        console.log("dutaaaa", newState.loginData)
+
+        newState.loginData = [];
+        console.log("dutaaaa", newState)
+
+        // newState.inProcess = false;
+        return newState;
+    }
+
+    else if (action.type === "Remove-cartItem") {
         let targetcartItems = newState.cartItems.find((items) => {
             return items.description == action.payload.description
         })
         if (targetcartItems) {
-            let getIndex=newState.cartItems.indexOf(targetcartItems);
-            newState.cartItems.splice(getIndex,1);
+            let getIndex = newState.cartItems.indexOf(targetcartItems);
+            newState.cartItems.splice(getIndex, 1);
         }
         return newState;
     }

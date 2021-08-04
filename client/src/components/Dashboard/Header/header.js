@@ -11,7 +11,18 @@ import MenuDrawer from "./Drawer/drawer";
 import { withRouter } from "react-router-dom";
 import store from "../../../store/store";
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import LoginForm from "./Login/login"
+import LoginForm from "./Login/tab"
+import { Button, message } from "antd";
+const key = "updatable";
+
+
+const Loginwrongmsg = () => {
+    message.loading({ content: "Loading...", key });
+    setTimeout(() => {
+        message.warning({ content: "Incorrect Email && password!", key, duration: 2 });
+    }, 1000);
+};
+
 
 const style = {
   link: { backgroundColor: "transparent", fontSize: "15px" },
@@ -92,6 +103,12 @@ class Header extends Component {
       });
   };
 
+  logout = () => {
+    store.dispatch({
+      type: "LOGOUT",
+      payload: {},
+    });
+  }
   // onBgColorChange = bgPosition => {
   //   // localStorage.setItem("bgPosition", bgPosition);
   //   this.setState({
@@ -110,9 +127,10 @@ class Header extends Component {
       <div
         className="headr_main_div"
         style={{
-          position: this.state.bgPosition,
+          // position: this.state.bgPosition,
           zIndex: 10,
           top: 0,
+          position:"sticky",
           backgroundColor: "grey",
           width: "100%",
           paddingTop: "15px",
@@ -159,17 +177,23 @@ class Header extends Component {
             <Col span={12}>
               <div className="headerRight">
                 <ul style={{ listStyle: "none" }} className="ul">
-
-                  {/* <div> */}
-                  {/* <ul style={{ listStyle: "none" }} className="ul">
-                      
-                    </ul> */}
                   <li className="listitem responsive" >
+
                     <div class="dropdown">
-                      <button>
-                        <PermIdentityIcon />
-                      </button>
-                      <div class="dropdown-content">
+                      {console.log("check", this.props.loginData.email === this.props.arrayData.email)}
+
+                      {this.props.loginData &&
+                        this.props.loginData.email !== this.props.arrayData.email && this.props.loginData.password !== this.props.arrayData.phone ?
+                        < button >
+                          <PermIdentityIcon />
+                        </button>
+                        :
+                        <span style={{ color: "white",fontSize:"15px",textTransform:"uppercase" }}>{ this.props.arrayData.name}</span>
+                       
+                      }
+
+
+                      <div class="dropdown-content" style={{minHeight:0}}>
                         <div className="drop-inner">
                           <div
                             style={{
@@ -178,66 +202,38 @@ class Header extends Component {
                               width: "100%",
                             }}
                           >
-                            {/* {this.state.saphonaSubCats.map((item, index) => {
-                              return ( */}
-                            <Link
-                            //  to={`/login`}
-                            // onMouseOver={() =>
-                            //   <span></span>
-                            // }
-                            // onMouseOut={() =>
-                            //   this.setState({
-                            //     hoverImage:
-                            //       this.state.saphonaSubCats &&
-                            //       this.state.saphonaSubCats[0] &&
-                            //       this.state.saphonaSubCats[0].file,
-                            //   })
-                            // }
-                            >
-                              <LoginForm />
-                              {/* <span
-                                    className="dpdwn_link"
-                                    onClick={() =>
-                                      <LoginForm/>
-                                    }
-                                  >
-                                    Login
-                                  </span> */}
-                              {/* <span
-                                    className="dpdwn_link"
-                                    onClick={(event) =>
-                                      this.sendReqToGetProduct(
-                                        event,
-                                        item.maincategory,
-                                        item.subCateg
-                                      )
-                                    }
-                                  >
-                                    Register
-                                  </span> */}
-                            </Link>
-                            {/* );
-                            })} */}
+                            {this.props.loginData &&
+
+                              this.props.loginData.email !== this.props.arrayData.email && this.props.loginData.password !== this.props.arrayData.phone ?
+                            
+                              <Link>
+                                <LoginForm />               
+                              </Link>
+                             
+                            
+
+                             
+
+                              :
+
+                              <button onClick={this.logout} style={{width:"100px",height:"50px",backgroundColor:"grey",color:"white",fontSize:"18px"}}>Logout</button>
+                            }
+
+
+                            
                           </div>
-                          {/* <img
-                            style={{
-                              textAlign: "center",
-                              display: "flex",
-                              justifyContent: "flex-end",
-                            }}
-                            src={this.state.hoverImage}
-                            width="300px"
-                            height="450px"
-                          /> */}
+
                         </div>
                       </div>
 
                     </div>
+
+
                   </li>
 
                   {/* </div> */}
 
-                
+
 
 
                   <li className="listitem responsive">
@@ -253,13 +249,15 @@ class Header extends Component {
                     <div class="dropdown">
                       <span className="dropbtn" style={{ color: "white" }}>Menu</span>
                       <i class="fa fa-caret-down" style={{ color: "white", marginLeft: "5px" }}></i>
-                      <div class="dropdown-content">
+                      <div class="dropdown-content" style={{ minHeight: 0 }}>
                         <div className="drop-inner">
                           <div
                             style={{
                               display: "flex",
                               flexDirection: "column",
-                              width: "100%",
+                              width: "150px",
+                              height: "auto",
+                              backgroundColor: "#9b9696"
                             }}
                           >
                             {this.state.saphonaSubCats.map((item, index) => {
@@ -296,16 +294,7 @@ class Header extends Component {
                               );
                             })}
                           </div>
-                          {/* <img
-                            style={{
-                              textAlign: "center",
-                              display: "flex",
-                              justifyContent: "flex-end",
-                            }}
-                            src={this.state.hoverImage}
-                            width="300px"
-                            height="450px"
-                          /> */}
+
                         </div>
                       </div>
 
@@ -344,13 +333,15 @@ class Header extends Component {
           </Row>
           <div></div>
         </div>
-      </div>
+      </div >
     );
   }
 }
 let NewVM = connect(function (store) {
   return {
     subCats: store.imgReducer.subCats,
+    arrayData: store.cartReducer.arrayData,
+    loginData: store.cartReducer.loginData
   };
 })(withRouter(Header));
 export default NewVM;

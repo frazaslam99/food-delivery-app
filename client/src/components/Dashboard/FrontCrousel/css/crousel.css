@@ -1,13 +1,16 @@
 .slider_item .collectionpane {
   background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
+  /* width: 100%; */
+
+  opacity: 0.2;
   padding-top: 24px;
   padding-bottom: 24px;
 }
 .slider_item {
-  min-height: 90vh;
+  min-height: 70vh;
   text-align: center;
   display: flex;
+  opacity: 0.6;
   justify-content: center;
   align-items: center;
 }

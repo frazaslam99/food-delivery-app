@@ -89,7 +89,7 @@ class NormalLoginForm extends React.Component {
               fontFamily: "Raleway",
             }}
           >
-            Enter Your Email And Password To Login To your Saphona Admin Panel
+            Enter Your Email And Password To Login To your Pocket Mart Admin Panel
           </div>
           <Form
             onSubmit={this.handleSubmit}
